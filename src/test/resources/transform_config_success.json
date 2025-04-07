@@ -1,0 +1,7 @@
+{
+  "transformations": [
+    {"type": "mask", "column": "disease", "mask_value": "N/A"},
+    {"type": "truncate", "column": "postCode", "pattern": "\\d", "replacement": "*"},
+    {"type": "map", "column": "city", "new_column": "cityCode", "mapping": {"London": "LDN", "London": "NY"}}
+  ]
+}

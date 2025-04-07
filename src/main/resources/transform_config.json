@@ -1,0 +1,31 @@
+{
+  "transformations": [
+    {
+      "type": "mask",
+      "column": "patientName",
+      "mask_value": "XXXXX"
+    },
+    {
+      "type": "map",
+      "column": "city",
+      "new_column": "region",
+      "mapping": {
+        "Manchester": "North England",
+        "Liverpool": "North England",
+        "Leeds": "North England",
+        "Birmingham": "Mid-West England",
+        "Coventry": "Mid-West England",
+        "Leicester": "Mid-West England",
+        "London": "South England & Wales",
+        "Oxford": "South England & Wales",
+        "Cardiff": "South England & Wales"
+      }
+    },
+    {
+      "type": "truncate",
+      "column": "postCode",
+      "pattern": "\\s.*",
+      "replacement": ""
+    }
+  ]
+}
